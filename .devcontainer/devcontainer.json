@@ -1,0 +1,15 @@
+{
+  "image": "ghcr.io/nix-devcontainers/base:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jetpack-io.devbox",
+        "rust-lang.rust-analyzer",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "devbox run exit"
+}
